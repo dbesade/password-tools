@@ -1,0 +1,21 @@
+name: WhiteBeam Acceptance Smoke
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Confirm approved task branch
+        shell: bash
+        run: |
+          case "$GITHUB_REF_NAME" in
+            whitebeam/*) ;;
+            *) echo 'This smoke check only accepts WhiteBeam task branches.'; exit 1 ;;
+          esac
+          printf 'WhiteBeam acceptance smoke passed for %s at %s\n' "$GITHUB_REF_NAME" "$GITHUB_SHA"
