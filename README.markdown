@@ -62,5 +62,5 @@ These tools where originally written when I was an employee of Deloitte South Af
 http://www.sensepost.com/blog/4668.html
 
 #6. Testing
-This project has no automated test suite: the tools are static HTML/JavaScript pages, so verify them by opening the tool files in a browser (e.g. `Password Generator.html`, `Password Strength Checker.html`) and exercising the generator and strength-checker flows manually.
+This project has no automated test suite: the tools are static HTML/JavaScript pages, so verify them by opening the tool files in a browser (e.g. `Password Generator.html`, `Password Strength Checker.html`) and exercising the generator and strength-checker flows manually. Report problems by opening a GitHub issue.
 
